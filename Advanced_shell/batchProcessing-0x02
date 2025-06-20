@@ -1,0 +1,9 @@
+#!/bin/bash
+# Define my pokehuman
+Pokémon=[Bulbasaur, Ivysaur, Venusaur, Charmander, Charmeleon]
+# Loop through the array
+for Pokémon in "${Pokémon[@]}"
+do
+ curl -s "https://pokeapi.co/api/v2/pokemon/$" -o "${Pokémon}.json"
+   echo "sucessfully retrieved data from :$Pokémon"
+done
