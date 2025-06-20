@@ -6,7 +6,7 @@
 echo " fetching data from APi"
 
 # make the API call and store the response on joson file 
-curl ""https://pokeapi.co/api/v2/pokemon/"" -o "data.json"
+curl -s "https://pokeapi.co/api/v2/pokemon-form/25/" -o "data.json"
 # check if the response is not empty
 if [ $? -eq 0 ]; then
     echo "Sucessfully fetched data from the API"
