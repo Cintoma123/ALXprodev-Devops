@@ -1,0 +1,17 @@
+#!/bin/bash 
+# define the base url for the API 
+"https://pokeapi.co/api/v2/pokemon/"
+# define pokename 
+
+echo " fetching data from APi"
+
+# make the API call and store the response on joson file 
+curl ""https://pokeapi.co/api/v2/pokemon/"" -o "data.json"
+# check if the response is not empty
+if [ $? -eq 0 ]; then
+    echo "Sucessfully fetched data from the API"
+    echo "API data sucessfully saved to"
+    else
+    echo " Failed to fetch data from the API to" >> errors.txt
+    fi 
+    # save the response to a json files
