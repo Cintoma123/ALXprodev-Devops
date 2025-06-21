@@ -1,1 +1,11 @@
+
 #!/bin/bash
+
+# Extract fields for the person named "pikachu"
+data=$(jq -r '.[] | select(.name=="samuel") | "\(.name) \(.height) \(.weight) \(.type)"' data.json)
+
+# Read the data into an array
+read -r name age weight type <<< "$data"
+
+# Print the extracted information
+echo "$name is of type $type, weighs ${weight}kg, and is $height tall ."
